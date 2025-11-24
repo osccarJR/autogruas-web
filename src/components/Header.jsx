@@ -25,7 +25,7 @@ export default function Header() {
           <div className="flex items-center">
             <img
               src={logoImage}
-              alt="Auto Grúas EC - Soluciones 24/7 en Quito"
+              alt="Auto GrA�as EC - Soluciones 24/7 en Quito"
               className="h-11 sm:h-14 lg:h-16"
             />
           </div>

@@ -9,6 +9,7 @@ export default function Footer() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -109,7 +110,7 @@ export default function Footer() {
         {/* Derechos */}
         <div className="text-center text-gray-400 text-sm">
           <p>
-            (c) 2025 Auto Gruas EC - Todos los derechos reservados - Servicio 24/7 en Quito, Ecuador
+            {`(c) ${currentYear} Auto Gruas EC - Todos los derechos reservados - Servicio 24/7 en Quito, Ecuador`}
           </p>
         </div>
       </div>
