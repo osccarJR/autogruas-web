@@ -20,6 +20,10 @@ export default function ContactSection() {
     const whatsappMessage = `Hola, soy ${formData.name}. ${formData.message}. Mi teléfono es ${formData.phone}`;
     const whatsappUrl = `https://wa.me/593996555617?text=${encodeURIComponent(whatsappMessage)}`;
     
+    if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
+      window.gtag_report_conversion();
+    }
+
     window.open(whatsappUrl, "_blank");
     toast.success("Abriendo WhatsApp...");
     

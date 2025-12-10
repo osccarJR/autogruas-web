@@ -236,6 +236,22 @@
     gtag('js', new Date());
     gtag('config', 'AW-11404633722');
 
+    // Google Ads conversion: WhatsApp – Lead Grúas Quito
+    function gtag_report_conversion(url) {
+      const callback = function () {
+        if (typeof url !== "undefined") {
+          window.location = url;
+        }
+      };
+      gtag("event", "conversion", {
+        send_to: "AW-11404633722/22D2CPWijs8bEPrMk74q",
+        value: 1.0,
+        currency: "USD",
+        event_callback: callback,
+      });
+      return false;
+    }
+
     // Track WhatsApp and Call clicks for conversion optimization
     const trackClickTargets = () => {
       const send = (type, href) => {
@@ -250,6 +266,9 @@
 
         if (href.startsWith("https://wa.me") || href.includes("api.whatsapp.com")) {
           send("click_whatsapp", href);
+          if (typeof gtag_report_conversion === "function") {
+            gtag_report_conversion();
+          }
         } else if (href.startsWith("tel:")) {
           send("click_llamar", href);
         }
