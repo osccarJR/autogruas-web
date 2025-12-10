@@ -41,6 +41,15 @@ export default function Header() {
             <button onClick={() => scrollToSection("servicios")} className="text-gray-700 hover:text-[#E3B221] transition-colors">
               Servicios
             </button>
+            <button onClick={() => scrollToSection("por-que-elegirnos")} className="text-gray-700 hover:text-[#E3B221] transition-colors">
+              Por que elegirnos
+            </button>
+            <button onClick={() => scrollToSection("cobertura")} className="text-gray-700 hover:text-[#E3B221] transition-colors">
+              Cobertura
+            </button>
+            <button onClick={() => scrollToSection("faq")} className="text-gray-700 hover:text-[#E3B221] transition-colors">
+              FAQ
+            </button>
             <button onClick={() => scrollToSection("contacto")} className="text-gray-700 hover:text-[#E3B221] transition-colors">
               Contacto
             </button>
@@ -113,6 +122,15 @@ export default function Header() {
               </button>
               <button onClick={() => scrollToSection("servicios")} className="text-gray-700 hover:text-[#E3B221] py-2 text-left">
                 Servicios
+              </button>
+              <button onClick={() => scrollToSection("por-que-elegirnos")} className="text-gray-700 hover:text-[#E3B221] py-2 text-left">
+                Por que elegirnos
+              </button>
+              <button onClick={() => scrollToSection("cobertura")} className="text-gray-700 hover:text-[#E3B221] py-2 text-left">
+                Cobertura
+              </button>
+              <button onClick={() => scrollToSection("faq")} className="text-gray-700 hover:text-[#E3B221] py-2 text-left">
+                FAQ
               </button>
               <button onClick={() => scrollToSection("contacto")} className="text-gray-700 hover:text-[#E3B221] py-2 text-left">
                 Contacto

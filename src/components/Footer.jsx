@@ -94,6 +94,33 @@ export default function Footer() {
           <span className="text-gray-600">|</span>
 
           <button
+            onClick={() => scrollToSection("por-que-elegirnos")}
+            className="text-gray-300 hover:text-[#E3B221] transition-colors"
+          >
+            Por que elegirnos
+          </button>
+
+          <span className="text-gray-600">|</span>
+
+          <button
+            onClick={() => scrollToSection("cobertura")}
+            className="text-gray-300 hover:text-[#E3B221] transition-colors"
+          >
+            Cobertura
+          </button>
+
+          <span className="text-gray-600">|</span>
+
+          <button
+            onClick={() => scrollToSection("faq")}
+            className="text-gray-300 hover:text-[#E3B221] transition-colors"
+          >
+            FAQ
+          </button>
+
+          <span className="text-gray-600">|</span>
+
+          <button
             onClick={() => scrollToSection("contacto")}
             className="text-gray-300 hover:text-[#E3B221] transition-colors"
           >

@@ -2,7 +2,7 @@ import { MapPin, Navigation, CheckCircle } from "lucide-react";
 
 export default function CoverageSection() {
   return (
-    <section className="py-20 sm:py-28 bg-white">
+    <section id="cobertura" className="py-20 sm:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Clear Title */}
         <div className="text-center mb-16">
