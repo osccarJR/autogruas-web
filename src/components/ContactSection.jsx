@@ -1,4 +1,4 @@
-import { Phone, MessageSquare, Mail, Clock, MapPin, ArrowRight } from "lucide-react";
+import { Phone, Mail, Clock, MapPin, ArrowRight, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -9,24 +9,40 @@ export default function ContactSection() {
     message: "",
   });
 
+  const normalizeE164Phone = (value) => {
+    const digits = value.replace(/\D/g, "");
+    if (!digits) return "";
+    if (digits.startsWith("593")) return `+${digits}`;
+    if (digits.startsWith("0")) return `+593${digits.slice(1)}`;
+    if (digits.length === 9) return `+593${digits}`;
+    return `+${digits}`;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.phone || !formData.message) {
       toast.error("Por favor completa todos los campos");
       return;
     }
 
-    const whatsappMessage = `Hola, soy ${formData.name}. ${formData.message}. Mi teléfono es ${formData.phone}`;
+    const whatsappMessage = `Hola, soy ${formData.name}. ${formData.message}. Mi telefono es ${formData.phone}`;
     const whatsappUrl = `https://wa.me/593996555617?text=${encodeURIComponent(whatsappMessage)}`;
-    
+
+    const normalizedPhone = normalizeE164Phone(formData.phone);
+    if (typeof window !== "undefined" && typeof window.gtag === "function" && normalizedPhone) {
+      window.gtag("set", "user_data", {
+        phone_number: normalizedPhone,
+      });
+    }
+
     if (typeof window !== "undefined" && typeof window.gtag_report_conversion === "function") {
       window.gtag_report_conversion();
     }
 
     window.open(whatsappUrl, "_blank");
     toast.success("Abriendo WhatsApp...");
-    
+
     setFormData({ name: "", phone: "", message: "" });
   };
 
@@ -99,7 +115,7 @@ export default function ContactSection() {
         {/* Formulario */}
         <div className="max-w-3xl mx-auto mb-12">
           <div className="bg-gray-50 p-8 sm:p-10 rounded-2xl border-2 border-gray-200">
-            <h3 className="text-gray-900 text-2xl mb-2 text-center">O déjanos tus datos</h3>
+            <h3 className="text-gray-900 text-2xl mb-2 text-center">O dejanos tus datos</h3>
             <p className="text-gray-600 text-center mb-8">Te contactaremos de inmediato</p>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -114,14 +130,14 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E3B221]"
-                    placeholder="Ej: Juan Pérez"
+                    placeholder="Ej: Juan Perez"
                     required
                   />
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-gray-700 mb-2">
-                    Tu teléfono
+                    Tu telefono
                   </label>
                   <input
                     type="tel"
@@ -138,7 +154,7 @@ export default function ContactSection() {
 
               <div>
                 <label htmlFor="message" className="block text-gray-700 mb-2">
-                  ¿Qué servicio necesitas?
+                  Que servicio necesitas?
                 </label>
                 <textarea
                   id="message"
