@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+﻿import { Phone } from "lucide-react";
 
 export default function FloatingButtons() {
   return (
@@ -25,7 +25,7 @@ export default function FloatingButtons() {
 
         {/* Tooltip */}
         <div className="absolute left-24 sm:left-20 bottom-1/2 transform translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none text-sm">
-          Escribenos por WhatsApp
+          escríbenos por WhatsApp
         </div>
       </a>
 
@@ -56,3 +56,5 @@ export default function FloatingButtons() {
     </>
   );
 }
+
+

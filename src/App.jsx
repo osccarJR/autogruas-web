@@ -15,7 +15,7 @@ import FloatingButtons from "./components/FloatingButtons";
 
 export default function App() {
   useEffect(() => {
-    document.title = "Auto Gruas EC | Servicio 24/7 en Quito | Llegamos en 20 Minutos";
+    document.title = "Auto Gruas EC | Grúa urgente 24/7 en Quito | Llegamos en 20 minutos";
   }, []);
 
   return (
@@ -37,3 +37,5 @@ export default function App() {
     </div>
   );
 }
+
+

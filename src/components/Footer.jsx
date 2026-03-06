@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, Phone } from "lucide-react";
+﻿import { Mail, MessageCircle, Phone } from "lucide-react";
 
 const logoImage = "/images/logo.png";
 
@@ -14,23 +14,15 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Logo */}
         <div className="flex justify-center mb-8">
-          <img
-            src={logoImage}
-            alt="Auto Gruas EC - Soluciones 24/7 en Quito"
-            className="h-20 sm:h-24"
-          />
+          <img src={logoImage} alt="Auto Gruas EC - Grúas 24/7 en Quito" className="h-20 sm:h-24" />
         </div>
 
-        {/* Mensaje */}
         <div className="text-center mb-8">
           <p className="text-gray-400 max-w-2xl mx-auto mb-6">
-            Tu aliado en emergencias vehiculares. Servicio profesional,
-            rapido y confiable las 24 horas del dia.
+            Especialistas en gruas. Traslado y rescate vehicular rápido, seguro y confiable las 24 horas.
           </p>
 
-          {/* Contacto directo */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
               href="tel:+593996555617"
@@ -64,83 +56,52 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Links */}
         <div className="flex flex-wrap justify-center gap-6 mb-8">
-          <button
-            onClick={() => scrollToSection("inicio")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
+          <button onClick={() => scrollToSection("inicio")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
             Inicio
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("nosotros")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
+          <button onClick={() => scrollToSection("varado")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
+            Estoy varado
+          </button>
+          <span className="text-gray-600">|</span>
+          <button onClick={() => scrollToSection("nosotros")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
             Nosotros
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("servicios")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
-            Servicios
+          <button onClick={() => scrollToSection("servicios")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
+            Gruas
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("por-que-elegirnos")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
-            Por que elegirnos
+          <button onClick={() => scrollToSection("por-que-elegirnos")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
+            Por qué elegirnos
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("cobertura")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
+          <button onClick={() => scrollToSection("cobertura")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
             Cobertura
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("faq")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
+          <button onClick={() => scrollToSection("faq")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
             FAQ
           </button>
-
           <span className="text-gray-600">|</span>
-
-          <button
-            onClick={() => scrollToSection("contacto")}
-            className="text-gray-300 hover:text-[#E3B221] transition-colors"
-          >
+          <button onClick={() => scrollToSection("contacto")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
             Contacto
           </button>
         </div>
 
-        {/* SEO keywords */}
         <div className="text-center mb-6 text-xs text-gray-500 max-w-4xl mx-auto">
-          Gruas 24/7 en Quito - Auxilio vehicular Ecuador - Traslado de autos -
-          Carga de bateria - Combustible emergencia - Norte, Sur y Valles de Quito
+          Gruas en Quito | Gruas Quito | Winchas en Quito | Wincha Quito | Grua urgente Quito | Norte, sur y valles de Quito
         </div>
 
-        {/* Derechos */}
         <div className="text-center text-gray-400 text-sm">
-          <p>
-            {`(c) ${currentYear} Auto Gruas EC - Todos los derechos reservados - Servicio 24/7 en Quito, Ecuador`}
-          </p>
+          <p>{`(c) ${currentYear} Auto Gruas EC - Todos los derechos reservados - Grúas 24/7 en Quito`}</p>
         </div>
       </div>
     </footer>
   );
 }
+
+
+
+
