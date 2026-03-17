@@ -61,8 +61,8 @@ export default function Footer() {
             Inicio
           </button>
           <span className="text-gray-600">|</span>
-          <button onClick={() => scrollToSection("varado")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
-            Estoy varado
+          <button onClick={() => scrollToSection("contacto")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
+            Solicitar grúa
           </button>
           <span className="text-gray-600">|</span>
           <button onClick={() => scrollToSection("nosotros")} className="text-gray-300 hover:text-[#E3B221] transition-colors">
